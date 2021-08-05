@@ -1,0 +1,6 @@
+{
+    "database": "rate-a-movie",
+    "username": "postgres",
+    "password": "admin",
+    "host": "localhost"
+}
