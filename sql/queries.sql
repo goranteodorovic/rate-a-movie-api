@@ -9,14 +9,11 @@ CREATE TABLE movie (
     type_id integer
 );
 
-ALTER TABLE movie
-  ADD CONSTRAINT type_id_fk FOREIGN KEY (type_id) REFERENCES movie_type (id) ON UPDATE NO ACTION ON DELETE RESTRICT;
-
 CREATE TABLE movie_rating_map (
 	id serial primary key,
     movie_id integer not null,
-    rating numeric not null
-)
+    rating integer not null
+);
 
 ALTER TABLE movie_rating_map
   ADD CONSTRAINT movie_id_fk FOREIGN KEY (movie_id) REFERENCES movie (id) ON UPDATE NO ACTION ON DELETE RESTRICT;
